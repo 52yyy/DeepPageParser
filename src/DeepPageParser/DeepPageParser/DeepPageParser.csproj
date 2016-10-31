@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,8 +42,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ArticleSource.cs" />
+    <Compile Include="Builder\PendingAnalysisPageBuilder.cs" />
+    <Compile Include="Classifier\ArticleChecker.cs" />
+    <Compile Include="Classifier\ArticleFeature.cs" />
+    <Compile Include="Condition.cs" />
+    <Compile Include="DataModel\DeepPageParsedInfo.cs" />
+    <Compile Include="DataModel\ForumDeepParsedInfo.cs" />
+    <Compile Include="DataModel\NewsDeepParsedInfo.cs" />
+    <Compile Include="DataModel\StructureDeepParsedInfo.cs" />
+    <Compile Include="DataModel\WeixinDeepParsedInfo.cs" />
+    <Compile Include="DeepParseExecuteResult.cs" />
+    <Compile Include="Dom\BlockInfo.cs" />
+    <Compile Include="Dom\CaptionInfo.cs" />
+    <Compile Include="Dom\HyperRatioInfo.cs" />
+    <Compile Include="Dom\ImageInfo.cs" />
+    <Compile Include="Dom\ResultType.cs" />
+    <Compile Include="Dom\WidthHeight.cs" />
+    <Compile Include="Dom\WrappedNode.cs" />
+    <Compile Include="ExceptionFactory.cs" />
+    <Compile Include="ExecuteStatus.cs" />
+    <Compile Include="ExtractionResultFeature.cs" />
+    <Compile Include="FailDeepParseExecuteResult.cs" />
+    <Compile Include="IDeepParseExecuteResult.cs" />
+    <Compile Include="Identifier\PageTypeIdentifier.cs" />
+    <Compile Include="PageType.cs" />
+    <Compile Include="Parser\EmptyPageParser.cs" />
+    <Compile Include="Parser\ForumPageParser.cs" />
+    <Compile Include="Parser\News\NewsPageFieldCandidateGenerator.cs" />
+    <Compile Include="Parser\News\NewsPageFieldExtractor.cs" />
+    <Compile Include="Parser\News\NewsPageFieldParser.cs" />
+    <Compile Include="Parser\News\NewsPageParser.cs" />
+    <Compile Include="Parser\News\NewsParserConfig.cs" />
+    <Compile Include="Parser\News\PageFieldDebug.cs" />
+    <Compile Include="Parser\News\PageFieldType.cs" />
+    <Compile Include="Parser\News\PublishTimeContext.cs" />
+    <Compile Include="Parser\News\PublishTimeExtractor.cs" />
+    <Compile Include="Parser\News\SourceExtractor.cs" />
+    <Compile Include="Parser\News\UnstructuredContentPageParser.cs" />
+    <Compile Include="Parser\PageParser.cs" />
+    <Compile Include="Parser\Visit\NewsFields.cs" />
+    <Compile Include="Parser\Visit\VisitInfo.cs" />
+    <Compile Include="Parser\Visit\VisitInfoHelper.cs" />
+    <Compile Include="Parser\Weixin\MainImage.cs" />
+    <Compile Include="Parser\Weixin\MainImageExtractor.cs" />
+    <Compile Include="Parser\Weixin\Noise.cs" />
+    <Compile Include="Parser\Weixin\NoiseContext.cs" />
+    <Compile Include="Parser\Weixin\NoiseModel.cs" />
+    <Compile Include="Parser\Weixin\NoiseStatisticalBuffer.cs" />
+    <Compile Include="Parser\Weixin\WeixinPageParser.cs" />
+    <Compile Include="Parser\Weixin\WeixinParserConfig.cs" />
+    <Compile Include="PendingAnalysisPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublishTime.cs" />
+    <Compile Include="Train\BlockStatisticInfo.cs" />
+    <Compile Include="Util\BlockHelper.cs" />
+    <Compile Include="Util\DocHelper.cs" />
+    <Compile Include="Util\ImageHelper.cs" />
+    <Compile Include="Util\ImageParagragh.cs" />
+    <Compile Include="Util\ListPageCheckHelper.cs" />
+    <Compile Include="Util\NextPageUtil.cs" />
+    <Compile Include="Util\NodeHelper.cs" />
+    <Compile Include="Util\Paragragh.cs" />
+    <Compile Include="Util\StringHelper.cs" />
+    <Compile Include="Util\TextParagragh.cs" />
+    <Compile Include="Util\TitleHelper.cs" />
+    <Compile Include="Util\TrimHelper.cs" />
+    <Compile Include="Util\Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
